@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url("images/leaves.jpg");
+        height: auto;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      img {
+        width: 100px;
+        border-radius: 50px;
+        float: left;
+        margin-left: auto;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      img:hover {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      }
+      img:active {
+        opacity: 0.6;
+      }
+      .username {
+        font-weight: bold;
+        font-style: oblique;
+        text-align: center;
+      }
+      button.subscribe {
+        font-weight: bold;
+        background-color: rgb(190, 18, 18);
+        color: white;
+        border: none;
+        height: 34px;
+        width: 100px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 4px;
+      }
+      button.subscribe:hover {
+        opacity: 0.7;
+      }
+      button.subscribe:active {
+        opacity: 0.35;
+      }
+      button.join {
+        border-color: rgb(0, 140, 255);
+        height: 35px;
+        width: 60px;
+        border-radius: 2px;
+        color: rgb(0, 140, 255);
+        background-color: white;
+        border-style: solid;
+        border-width: 1px;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 4px;
+        transition: all 0.15s;
+      }
+      button.join:hover {
+        background-color: rgb(0, 140, 255);
+        color: white;
+      }
+      button.join:active {
+        opacity: 0.7;
+      }
+      button.tweet {
+        border-radius: 17px;
+        height: 35px;
+        border: none;
+        background-color: rgb(0, 140, 255);
+        color: white;
+        font-weight: bold;
+        width: 60px;
+        cursor: pointer;
+        margin-left: 4px;
+        margin-top: 4px;
+        transition: all 0.15s;
+      }
+      button.tweet:hover {
+        opacity: 0.7;
+      }
+      button.tweet:active {
+        opacity: 0.35;
+      }
+      button.uber {
+        background-color: black;
+        color: white;
+        border: none;
+        height: 36px;
+        width: 115px;
+        margin-left: 8px;
+        cursor: pointer;
+        margin-top: 4px;
+        transition: all 0.15s;
+      }
+      button.uber:hover {
+        opacity: 0.7;
+      }
+      button.uber:active {
+        opacity: 0.35;
+      }
+      button.amazon {
+        background-color: rgb(255, 216, 20);
+        color: black;
+        height: 34px;
+        border: none;
+        border-radius: 27px;
+        width: 170px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 4px;
+        transition: all 0.15s;
+      }
+      button.amazon:hover {
+        background-color: rgb(245, 207, 18);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      }
+      button.git {
+        background-color: rgb(46, 164, 79);
+        color: white;
+        font-weight: bold;
+        height: 36px;
+        border-color: rgb(46, 164, 79);
+        border-style: solid;
+        border-radius: 4px;
+        width: 80px;
+        cursor: pointer;
+        margin-left: 8px;
+        margin-top: 4px;
+        transition: all 0.15s;
+      }
+      button.git:hover {
+        background-color: white;
+        color: rgb(46, 164, 79);
+        border-color: rgb(46, 164, 79);
+        border-width: 1px;
+      }
+      button.git:active {
+        opacity: 0.5;
+      }
+      button.bs {
+        background-color: rgb(121, 82, 179);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 110px;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-left: 8px;
+        margin-top: 4px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      button.bs:hover {
+        background-color: white;
+        color: rgb(121, 82, 179);
+      }
+      button.bs:active {
+        opacity: 0.7;
+      }
+      button.bs2 {
+        background-color: white;
+        color: rgb(108, 117, 125);
+        border-width: 1px;
+        border-color: rgb(108, 117, 125);
+        border-style: solid;
+        font-weight: bold;
+        height: 36px;
+        width: 110px;
+        border-radius: 4px;
+        margin-left: 4px;
+        margin-top: 4px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      button.bs2:hover {
+        background-color: rgb(108, 117, 125);
+        color: white;
+      }
+      button.bs2:active {
+        opacity: 0.7;
+      }
+      button.lin {
+        background-color: rgb(10, 102, 194);
+        color: white;
+        height: 36px;
+        border-radius: 18px;
+        border: none;
+        font-weight: bold;
+        width: 200px;
+        margin-top: 4px;
+        margin-left: 4px;
+        cursor: pointer;
+        transition: all 0.15s;
+        transition: box-shadow 0.15s;
+      }
+      button.lin:hover {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+      }
+      button.lin:active {
+        opacity: 0.5;
+      }
+      button.lin2 {
+        background-color: white;
+        color: rgb(10, 102, 194);
+        border-color: rgb(10, 102, 194);
+        border-style: solid;
+        border-width: 1px;
+        height: 36px;
+        border-radius: 18px;
+        width: 80px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.15s;
+        margin-top: 8px;
+      }
+      button.lin2:hover {
+        border-width: 2px;
+        transition: border-width 0.15s;
+      }
+      button.lin2:active {
+        opacity: 0.5;
+      }
+      p {
+        color: navy;
+        font-size: large;
+        text-align: center;
+        transition: all 0.15s;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      p:hover {
+        color: black;
+      }
+    </style>
+    <title>My First Web Page</title>
+    <body>
+      <img src="images/madara.jpg" alt="Buildings" />
+      <p class="username">@aasiyamalik</p>
+      <p>Hey! I'm new to this. Nice to meet you. &nbsp;</p>
+      <p>
+        <a href="Company/about.html">About Me.</a><br />
+        <a href="images/kaguya-sama_b1ga.jpg">Kaguya</a><br />
+        <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+        <button class="subscribe">SUBSCRIBE</button><br />
+        <a href="https://twitter.com/i/flow/login" target="_blank">Twitter</a>
+        <button class="join">JOIN</button>
+        <button class="tweet">Tweet</button><br />
+        <a href="https://www.uber.com/pk/en/" target="_blank">Uber</a>
+        <button class="uber">Request now</button><br />
+        <a href="https://www.amazon.com/" target="_blank">Amazon</a>
+        <button class="amazon">Add to Cart</button><br />
+        <a
+          href="https://github.com/griddb/griddb?gclid=EAIaIQobChMI8s_bjv34-QIVBZ53Ch3CXwoUEAAYASAAEgKsj_D_BwE"
+          target="_blank"
+          >Git hub</a
+        >
+        <button class="git">Sign up</button><br />
+        <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+        <button class="bs">Get started</button>
+        <button class="bs2">Download</button><br />
+        <a href="https://www.linkedin.com/signup" target="_blank">LinkedIN</a>
+        <button class="lin">Apply on company website</button>
+        <button class="lin2">Save</button><br />
+        <a
+          href="https://www.youtube.com/watch?v=lbicNSnF7e0&ab_channel=LaughSociety"
+          target="_blank"
+          >Youtube</a
+        ><br />
+      </p>
+      <p class="1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi repellat
+        <br />
+        odio cupiditate officia delectus vitae perspiciatis in beatae <br />
+        voluptatibus? Inventore sapiente nulla dolorum ducimus adipisci iste
+        <br />
+        animi quisquam similique molestias nobis dolore odit, commodi debitis
+        <br />
+        ratione? Expedita, rerum eveniet earum aliquam quis deserunt. Fugiat
+        <br />
+        corporis necessitatibus et distinctio assumenda praesentium. <br />
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br />
+        Rem possimus mollitia enim iusto aliquid, labore nobis! Laudantium<br />
+        nihil exercitationem tempore fuga pariatur ut illo ipsa ea<br />
+        sit quos at est esse expedita temporibus quae praesentium delectus a
+        dolorum,<br />
+        commodi perspiciatis quod suscipit aut. Nam, necessitatibus.<br />
+        Iusto, praesentium iure temporibus libero odio magnam ex dignissimos
+        quas deleniti,<br />
+        quisquam, quos neque. Eius quia maiores tempora, <br />
+        excepturi sapiente soluta neque placeat! Quod temporibus consectetur
+        sequi.<br />
+        Quod illum consequuntur laudantium culpa odio iure voluptatum in,<br />
+        accusamus deserunt facilis, quia nisi reprehenderit <br />
+        libero et nemo numquam possimus atque veniam, aperiam nesciunt quibusdam
+        rem! Quaerat, iusto?
+      </p>
+      <a href="#">Jump to top</a>
+    </body>
+  </head>
+</html>
